@@ -1,4 +1,36 @@
 /* ==========================================
+   Reset all margins and padding
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+#app {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.periodic-table {
+  width: 100%;
+  max-width: 100%;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
    ElementsFactory - Global Variables
    ========================================== */
 
