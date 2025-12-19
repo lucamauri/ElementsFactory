@@ -80,7 +80,7 @@ class DataParser {
       if (typeof element.name !== 'string' || element.name.length === 0) {
         throw new Error(`Element at index ${index} has invalid name: ${element.name}`);
       }
-      if (typeof element.period !== 'number' || element.period < 1 || element.period > 7) {
+      if (typeof element.period !== 'number' || element.period < 1) {
         throw new Error(`Element at index ${index} has invalid period: ${element.period}`);
       }
       if (typeof element.group !== 'number' || element.group < 1 || element.group > 18) {
