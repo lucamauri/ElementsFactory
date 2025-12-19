@@ -1,0 +1,378 @@
+/* ==========================================
+   ElementsFactory - Global Variables
+   ========================================== */
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --bg-gradient-start: #667eea;
+  --bg-gradient-end: #764ba2;
+
+  --text-dark: #2c3e50;
+  --text-light: #ecf0f1;
+
+  --border-radius: 8px;
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-strong: 0 4px 16px rgba(0, 0, 0, 0.2);
+
+  --transition-fast: all 0.2s ease;
+  --transition-normal: all 0.3s ease;
+}
+
+/* ==========================================
+   Reset & Base
+   ========================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    var(--bg-gradient-start) 0%,
+    var(--bg-gradient-end) 100%
+  );
+  color: var(--text-dark);
+  padding: 20px;
+}
+
+/* ==========================================
+   Layout Container
+   ========================================== */
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ==========================================
+   Header
+   ========================================== */
+
+header {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 32px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+header .subtitle {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* ==========================================
+   Controls Bar
+   ========================================== */
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  background: #ffffff;
+  padding: 16px 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.control-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.control-group select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  cursor: pointer;
+  min-width: 150px;
+  transition: var(--transition-fast);
+}
+
+.control-group select:hover {
+  border-color: var(--accent-color);
+}
+
+.control-group select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.3);
+}
+
+/* ==========================================
+   Primary Button
+   ========================================== */
+
+.btn-primary {
+  padding: 8px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: linear-gradient(
+    135deg,
+    var(--accent-color),
+    #2980b9
+  );
+  box-shadow: 0 4px 10px rgba(52, 152, 219, 0.35);
+  transition: var(--transition-normal);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(52, 152, 219, 0.45);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(52, 152, 219, 0.3);
+}
+
+/* ==========================================
+   Table Wrapper
+   ========================================== */
+
+.table-wrapper {
+  background: #ffffff;
+  border-radius: var(--border-radius);
+  padding: 18px;
+  box-shadow: var(--shadow-soft);
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  margin-bottom: 24px;
+}
+
+/* Make SVG scale nicely */
+.table-wrapper svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   SVG Styling
+   ========================================== */
+
+.periodic-table .element {
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.periodic-table .element-box {
+  transition: var(--transition-normal);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
+.periodic-table .element:hover .element-box {
+  filter: brightness(1.2)
+    drop-shadow(0 3px 6px rgba(0, 0, 0, 0.25));
+  stroke-width: 2 !important;
+}
+
+.periodic-table text {
+  pointer-events: none; /* click goes to the group */
+  user-select: none;
+}
+
+/* ==========================================
+   Legend
+   ========================================== */
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 10px;
+  background: #ffffff;
+  padding: 16px 18px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+.legend-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+/* Legend colors roughly matching config.json (light theme) */
+.legend-box.alkali-metal {
+  background: #ff9e64;
+}
+.legend-box.alkaline-earth {
+  background: #ffb347;
+}
+.legend-box.transition {
+  background: #ffd700;
+}
+.legend-box.lanthanide {
+  background: #98fb98;
+}
+.legend-box.actinide {
+  background: #87ceeb;
+}
+.legend-box.nonmetal {
+  background: #a9a9a9;
+}
+.legend-box.metalloid {
+  background: #ffcccb;
+}
+.legend-box.halogen {
+  background: #ffb6c1;
+}
+.legend-box.noble-gas {
+  background: #dda0dd;
+}
+
+/* ==========================================
+   Error Message
+   ========================================== */
+
+.error-message {
+  background: #fdecea;
+  border: 1px solid #f5c6cb;
+  color: #b71c1c;
+  padding: 16px 20px;
+  border-radius: var(--border-radius);
+  font-size: 0.95rem;
+}
+
+/* ==========================================
+   Responsive Design
+   ========================================== */
+
+@media (max-width: 900px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .control-group {
+    justify-content: space-between;
+  }
+
+  .control-group select {
+    flex: 1;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+
+  .table-wrapper {
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 12px;
+  }
+
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header .subtitle {
+    font-size: 0.9rem;
+  }
+
+  .table-wrapper {
+    padding: 10px;
+    min-height: 320px;
+  }
+
+  .legend {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .legend-item {
+    font-size: 0.85rem;
+  }
+}
+
+/* ==========================================
+   Print Styles
+   ========================================== */
+
+@media print {
+  body {
+    background: #ffffff;
+    padding: 0;
+  }
+
+  header {
+    color: #000000;
+    text-shadow: none;
+    margin-bottom: 12px;
+  }
+
+  .controls,
+  .legend {
+    display: none !important;
+  }
+
+  .table-wrapper {
+    box-shadow: none;
+    padding: 0;
+    border-radius: 0;
+    min-height: auto;
+  }
+}

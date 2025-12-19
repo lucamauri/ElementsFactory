@@ -1,0 +1,107 @@
+{
+  "layouts": {
+    "compact": {
+      "boxWidth": 40,
+      "boxHeight": 45,
+      "gap": 2,
+      "padding": 15
+    },
+    "normal": {
+      "boxWidth": 60,
+      "boxHeight": 70,
+      "gap": 3,
+      "padding": 20
+    },
+    "large": {
+      "boxWidth": 80,
+      "boxHeight": 90,
+      "gap": 4,
+      "padding": 25
+    }
+  },
+
+  "themes": {
+    "light": {
+      "background": "#FFFFFF",
+      "text": "#000000",
+      "textSecondary": "#666666",
+      "categories": {
+        "alkali-metal": "#FF9E64",
+        "alkaline-earth": "#FFB347",
+        "transition": "#FFD700",
+        "lanthanide": "#98FB98",
+        "actinide": "#87CEEB",
+        "nonmetal": "#A9A9A9",
+        "metalloid": "#FFCCCB",
+        "halogen": "#FFB6C1",
+        "noble-gas": "#DDA0DD",
+        "metal": "#C0C0C0"
+      },
+      "stroke": "#333333",
+      "strokeWidth": 1
+    },
+
+    "dark": {
+      "background": "#1E1E1E",
+      "text": "#FFFFFF",
+      "textSecondary": "#AAAAAA",
+      "categories": {
+        "alkali-metal": "#FF6B35",
+        "alkaline-earth": "#F7931E",
+        "transition": "#FDB833",
+        "lanthanide": "#37B7C3",
+        "actinide": "#0092D2",
+        "nonmetal": "#595959",
+        "metalloid": "#FF7F50",
+        "halogen": "#FF69B4",
+        "noble-gas": "#9370DB",
+        "metal": "#808080"
+      },
+      "stroke": "#CCCCCC",
+      "strokeWidth": 0.5
+    },
+
+    "colorful": {
+      "background": "#F0F8FF",
+      "text": "#000000",
+      "textSecondary": "#555555",
+      "categories": {
+        "alkali-metal": "#E74C3C",
+        "alkaline-earth": "#E67E22",
+        "transition": "#F39C12",
+        "lanthanide": "#27AE60",
+        "actinide": "#3498DB",
+        "nonmetal": "#9B59B6",
+        "metalloid": "#1ABC9C",
+        "halogen": "#E91E63",
+        "noble-gas": "#00BCD4",
+        "metal": "#95A5A6"
+      },
+      "stroke": "#2C3E50",
+      "strokeWidth": 1.5
+    }
+  },
+
+  "typography": {
+    "compact": {
+      "symbolSize": 16,
+      "numberSize": 8,
+      "nameSize": 6
+    },
+    "normal": {
+      "symbolSize": 24,
+      "numberSize": 11,
+      "nameSize": 9
+    },
+    "large": {
+      "symbolSize": 32,
+      "numberSize": 14,
+      "nameSize": 12
+    }
+  },
+
+  "svg": {
+    "fontFamily": "Arial, sans-serif",
+    "fontWeight": "normal"
+  }
+}

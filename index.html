@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElementsFactory · SVG Periodic Table</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>ElementsFactory</h1>
+            <p class="subtitle">Procedurally Generated SVG Periodic Table</p>
+        </header>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="theme-select">Theme:</label>
+                <select id="theme-select">
+                    <option value="light">Light</option>
+                    <option value="dark">Dark</option>
+                    <option value="colorful">Colorful</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label for="size-select">Size:</label>
+                <select id="size-select">
+                    <option value="compact">Compact (40px)</option>
+                    <option value="normal" selected>Normal (60px)</option>
+                    <option value="large">Large (80px)</option>
+                </select>
+            </div>
+
+            <button id="export-svg" class="btn-primary">
+                Export SVG
+            </button>
+        </div>
+
+        <div id="table-container" class="table-wrapper">
+            <!-- SVG periodic table will be injected here by app.js -->
+        </div>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-box alkali-metal"></div>
+                <span>Alkali Metals</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box alkaline-earth"></div>
+                <span>Alkaline Earth</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box transition"></div>
+                <span>Transition Metals</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box lanthanide"></div>
+                <span>Lanthanides</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box actinide"></div>
+                <span>Actinides</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box nonmetal"></div>
+                <span>Nonmetals</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box metalloid"></div>
+                <span>Metalloids</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box halogen"></div>
+                <span>Halogens</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-box noble-gas"></div>
+                <span>Noble Gases</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts: order matters -->
+    <script src="src/parser.js"></script>
+    <script src="src/renderer.js"></script>
+    <script src="src/app.js"></script>
+</body>
+
+</html>
