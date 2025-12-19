@@ -75,11 +75,26 @@ class PeriodicTableRenderer {
   /**
    * Create background rectangle
    */
+  /*
   createBackground(themeConfig) {
     return `<rect width="100%" height="100%" fill="${themeConfig.background}"/>`;
   }
+  */
+  createBackground(themeConfig) {
+  const gradientId = 'bgGradient-' + Math.random().toString(36).substr(2, 9);
+  
+  return `
+    <defs>
+      <linearGradient id="${gradientId}" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:white;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:${themeConfig.background};stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#${gradientId})"/>
+  `;
+}
 
-  /**
+/**
    * Create a single element box (group with rect + texts)
    */
   createElementBox(element, layoutConfig, themeConfig, typographyConfig) {
